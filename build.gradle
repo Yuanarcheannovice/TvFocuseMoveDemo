@@ -19,9 +19,21 @@ allprojects {
     repositories {
         google()
         jcenter()
+        //XBaseAdapter 的 地址
+        maven { url 'https://jitpack.io' }
+        //各种lib的地址
+        maven { url 'https://raw.githubusercontent.com/Yuanarcheannovice/Android_Project_Lib/master/maven' }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+//全局设置版本
+ext {
+    minSdkVersion = 19
+    targetSdkVersion = 19
+    compileSdkVersion = 28
+    supportVersion = '28.0.0'
+    constraintLayout='1.1.3'
 }
